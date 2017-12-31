@@ -31,7 +31,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.gburton.physx.BoxFun</mainClass>
+                            <mainClass>com.gburton.boxdrop.BoxDrop</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

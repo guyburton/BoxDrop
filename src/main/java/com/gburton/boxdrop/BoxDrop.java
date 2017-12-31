@@ -1,4 +1,4 @@
-package com.gburton.physx;
+package com.gburton.boxdrop;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -17,9 +17,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class BoxFun {
+public class BoxDrop {
 
-    private static final Logger logger = Logger.getLogger(BoxFun.class);
+    private static final Logger logger = Logger.getLogger(BoxDrop.class);
 
     private static final float TIME_STEP = 1 / 60f;
     private static final int POSITION_ITERATIONS = 30;
@@ -36,7 +36,7 @@ public class BoxFun {
     private Point currentMousePoint;
     private JPanel backgroundPanel;
 
-    class Box {
+    private class Box {
         final Fixture fixture;
         final Color color;
 
@@ -77,10 +77,10 @@ public class BoxFun {
 
     public static void main(String[] args) throws InterruptedException {
         BasicConfigurator.configure();
-        new BoxFun();
+        new BoxDrop();
     }
 
-    BoxFun() throws InterruptedException {
+    private BoxDrop() throws InterruptedException {
         world = new World(new Vec2(0f, -9.8f));
 
         BodyDef floorDef = new BodyDef();
@@ -234,4 +234,5 @@ public class BoxFun {
         }
         return new Vec2(x, y);
     }
+
 }
